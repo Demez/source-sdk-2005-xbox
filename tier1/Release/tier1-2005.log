@@ -1,6 +1,7 @@
-﻿  bitbuf.cpp
-K:\HL1RE\source-sdk-2005-xbox\public\tier1\bitbuf.h(335,17): warning C4456: declaration of 'iCurBitMasked' hides previous local declaration
-K:\HL1RE\source-sdk-2005-xbox\public\tier1\bitbuf.h(323,16): message : see declaration of 'iCurBitMasked'
+﻿  KeyValues.cpp
+K:\HL1RE\source-sdk-2005-xbox\tier1\KeyValues.cpp(1123,16): warning C4456: declaration of 'buf' hides previous local declaration
+K:\HL1RE\source-sdk-2005-xbox\tier1\KeyValues.cpp(1102,8): message : see declaration of 'buf'
+  NetAdr.cpp
   byteswap.cpp
   characterset.cpp
   checksum_crc.cpp
@@ -10,26 +11,19 @@ K:\HL1RE\source-sdk-2005-xbox\tier1\convar.cpp(441,11): warning C4459: declarati
 K:\HL1RE\source-sdk-2005-xbox\public\icvar.h(48,15): message : see declaration of 'cvar'
   datamanager.cpp
   diff.cpp
-  generichash.cpp
   interface.cpp
   jobthread.cpp
-  KeyValues.cpp
-K:\HL1RE\source-sdk-2005-xbox\tier1\KeyValues.cpp(1123,16): warning C4456: declaration of 'buf' hides previous local declaration
-K:\HL1RE\source-sdk-2005-xbox\tier1\KeyValues.cpp(1102,8): message : see declaration of 'buf'
   mempool.cpp
   memstack.cpp
-  NetAdr.cpp
-  processor_detect.cpp
   rangecheckedvar.cpp
   stringpool.cpp
   strtools.cpp
   tier1.cpp
-  Generating Code...
-  Compiling...
-  tokenreader.cpp
   utlbuffer.cpp
   utlstring.cpp
   utlsymbol.cpp
+  Generating Code...
+  Compiling...
   xboxstubs.cpp
   Generating Code...
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetPath(K:\HL1RE\source-sdk-2005-xbox\tier1\Release\tier1.lib) does not match the Library's OutputFile property value (K:\HL1RE\source-sdk-2005-xbox\lib\public\tier1.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).

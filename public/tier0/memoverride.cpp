@@ -76,7 +76,7 @@ const char* MakeModuleFileName()
 class CStaticConstructionCheck
 {
 public:
-	volatile bool m_bConstructed = true;
+	volatile bool m_bConstructed = false;
 };
 
 static CStaticConstructionCheck s_CheckStaticsConstructed;
@@ -88,7 +88,7 @@ const char* GetModuleFileName()
 		return nullptr;
 #endif
 
-	static const char* pszOwner = MakeModuleFileName();
+	static const char *pszOwner = MakeModuleFileName();
 	return pszOwner;
 }
 
@@ -113,17 +113,6 @@ static void* ReallocUnattributed(void* pMem, size_t nSize)
 		return g_pMemAlloc->Realloc(pMem, nSize, pszOwner, 0);
 }
 
-#else
-#define MakeModuleFileName() NULL
-inline void* AllocUnattributed(size_t nSize)
-{
-	return g_pMemAlloc->Alloc(nSize);
-}
-
-inline void* ReallocUnattributed(void* pMem, size_t nSize)
-{
-	return g_pMemAlloc->Realloc(pMem, nSize);
-}
 #endif
 
 //-----------------------------------------------------------------------------

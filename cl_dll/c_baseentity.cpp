@@ -1,4 +1,4 @@
-//===== Copyright © 1996-2005, Valve Corporation, All rights reserved. ======//
+//===== Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. ======//
 //
 // Purpose: 
 //
@@ -4244,7 +4244,7 @@ C_BaseEntity *C_BaseEntity::Instance( int iEnt )
 }
 
 #pragma warning( push )
-#include <typeinfo.h>
+#include <typeinfo>
 #pragma warning( pop )
 
 //-----------------------------------------------------------------------------
