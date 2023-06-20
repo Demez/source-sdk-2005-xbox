@@ -101,6 +101,7 @@ if exist "$(TargetDir)""$(TargetName)".map copy "$(TargetDir)""$(TargetName)".ma
       <ProgramDatabaseFile>.\Debug/vbsp.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -160,6 +161,7 @@ if exist "$(TargetDir)""$(TargetName)".map copy "$(TargetDir)""$(TargetName)".ma
       <MapFileName>.\Release/vbsp.map</MapFileName>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
