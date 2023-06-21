@@ -98,8 +98,8 @@ void SetListsOnly(const bool bListsOnly);
 //
 // Be sure to call delete[] on the returned primGroups to avoid leaking mem
 //
-void GenerateStrips(const unsigned short* in_indices, const unsigned int in_numIndices,
-					PrimitiveGroup** primGroups, unsigned short* numGroups);
+bool GenerateStrips(const unsigned short* in_indices, const unsigned int in_numIndices,
+	PrimitiveGroup** primGroups, unsigned short* numGroups, bool validateEnabled);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////

@@ -15,8 +15,8 @@
 //#define IGNORE_BONES
 
 // define one of these.
-//#define XBOX_STRIPPER
-#define NVTRISTRIP
+#define XBOX_STRIPPER
+//#define NVTRISTRIP
 
 #define EMIT_TRILISTS
 
@@ -757,7 +757,7 @@ void COptimizedModel::Stripify( VertexIndexList_t const& sourceIndices,
 
 	// Be sure to call delete[] on the returned primGroups to avoid leaking mem
 	GenerateStrips( &sourceIndices[0], sourceIndices.Size(),
-		&primGroups, &numPrimGroups );
+		&primGroups, &numPrimGroups,false);
 	assert( numPrimGroups == 1 );
 	*pNumIndices = primGroups->numIndices;
 	*ppIndices = new unsigned short[*pNumIndices];

@@ -1139,12 +1139,7 @@ int main (int argc, char **argv)
 	InstallSpewFunction();
 
 	VVIS_SetupMPI( argc, argv );
-
-	// Install an exception handler.
-	if ( g_bUseMPI && !g_bMPIMaster )
-		SetupToolsMinidumpHandler( VMPI_ExceptionFilter );
-	else
-		SetupDefaultToolsMinidumpHandler();
+	SetupDefaultToolsMinidumpHandler();
 
 	return RunVVis( argc, argv );
 }

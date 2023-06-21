@@ -1,4 +1,21 @@
-﻿  mathlib_base.cpp
+﻿  halton.cpp
+  lightdesc.cpp
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,4): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,15): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,26): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,37): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+  mathlib_base.cpp
 K:\HL1RE\source-sdk-2005-xbox\mathlib\mathlib_base.cpp(100,1): warning C4838: conversion from 'unsigned int' to 'const int32' requires a narrowing conversion
+  powsse.cpp
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,4): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,15): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,26): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,37): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+  sseconst.cpp
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,4): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,15): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,26): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,37): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+  Generating Code...
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetPath(K:\HL1RE\source-sdk-2005-xbox\mathlib\Release\mathlib.lib) does not match the Library's OutputFile property value (K:\HL1RE\source-sdk-2005-xbox\lib\public\mathlib.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
   mathlib-2005.vcxproj -> K:\HL1RE\source-sdk-2005-xbox\mathlib\Release\mathlib.lib

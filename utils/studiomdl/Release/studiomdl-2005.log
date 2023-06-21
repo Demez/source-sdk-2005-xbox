@@ -1,1 +1,12 @@
-﻿
+﻿  optimize.cpp
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,4): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,15): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,26): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+K:\HL1RE\source-sdk-2005-xbox\public\mathlib\ssemath.h(371,37): warning C4838: conversion from 'unsigned int' to 'int32' requires a narrowing conversion
+tier2.lib(tier2.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library .\Release\studiomdl.lib and object .\Release\studiomdl.exp
+tier2.lib(tier2.obj) : warning LNK4099: PDB '' was not found with 'tier2.lib(tier2.obj)' or at ''; linking object as if no debug info
+  studiomdl-2005.vcxproj -> K:\HL1RE\source-sdk-2005-xbox\utils\studiomdl\Release\studiomdl.exe
+  copy to ..\..\..\game\bin\studiomdl.exe
+          1 file(s) copied.
+          1 file(s) copied.
