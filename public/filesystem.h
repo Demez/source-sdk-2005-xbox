@@ -629,36 +629,36 @@ public:
 
 //-----------------------------------------------------------------------------
 
-#if defined(_XBOX) && !defined(_RETAIL)
-extern char g_szXBOXProfileLastFileOpened[1024];
-#define SetLastProfileFileRead( s ) Q_strcpy( g_szXBOXProfileLastFileOpened, pFileName )
-#define GetLastProfileFileRead() (&g_szXBOXProfileLastFileOpened[0])
-#else
-#define SetLastProfileFileRead( s ) ((void)0)
-#define GetLastProfileFileRead() NULL
-#endif
-
-#if defined(_XBOX) && defined(_BASETSD_H_)
-class CXboxDiskCacheSetter
-{
-public:
-	CXboxDiskCacheSetter( SIZE_T newSize )
-	{
-		m_oldSize = XGetFileCacheSize();
-		XSetFileCacheSize( newSize );
-	}
-
-	~CXboxDiskCacheSetter()
-	{
-		XSetFileCacheSize( m_oldSize );
-	}
-private:
-	SIZE_T m_oldSize;
-};
-#define DISK_INTENSIVE() CXboxDiskCacheSetter cacheSetter( 1024*1024 )
-#else
-#define DISK_INTENSIVE() ((void)0)
-#endif
+//#if defined(_XBOX) && !defined(_RETAIL)
+//extern char g_szXBOXProfileLastFileOpened[1024];
+//#define SetLastProfileFileRead( s ) Q_strcpy( g_szXBOXProfileLastFileOpened, pFileName )
+//#define GetLastProfileFileRead() (&g_szXBOXProfileLastFileOpened[0])
+//#else
+//#define SetLastProfileFileRead( s ) ((void)0)
+//#define GetLastProfileFileRead() NULL
+//#endif
+//
+//#if defined(_XBOX) && defined(_BASETSD_H_)
+//class CXboxDiskCacheSetter
+//{
+//public:
+//	CXboxDiskCacheSetter( SIZE_T newSize )
+//	{
+//		m_oldSize = XGetFileCacheSize();
+//		XSetFileCacheSize( newSize );
+//	}
+//
+//	~CXboxDiskCacheSetter()
+//	{
+//		XSetFileCacheSize( m_oldSize );
+//	}
+//private:
+//	SIZE_T m_oldSize;
+//};
+//#define DISK_INTENSIVE() CXboxDiskCacheSetter cacheSetter( 1024*1024 )
+//#else
+//#define DISK_INTENSIVE() ((void)0)
+//#endif
 
 //-----------------------------------------------------------------------------
 

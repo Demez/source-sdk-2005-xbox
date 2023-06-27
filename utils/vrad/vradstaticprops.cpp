@@ -1,4 +1,4 @@
-//========= Copyright © 1996-2005, Valve Corporation, All rights reserved. ============//
+//========= Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. ============//
 //
 // Purpose: 
 //
@@ -358,7 +358,7 @@ bool LoadVTXFile( char const* pModelName, const studiohdr_t *pStudioHdr, CUtlBuf
 
 	// construct filename
 	Q_StripExtension( pModelName, filename, sizeof( filename ) );
-	strcat( filename, g_bXBox ? ".xbox.vtx" : ".dx80.vtx" );
+	strcat( filename, ".dx80.vtx" );
 
 	if ( !LoadFile( filename, buf ) )
 	{

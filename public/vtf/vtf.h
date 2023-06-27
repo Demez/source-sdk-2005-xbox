@@ -141,7 +141,7 @@ public:
 	virtual bool Unserialize( CUtlBuffer &buf, bool bBufferHeaderOnly = false, int nSkipMipLevels = 0 ) = 0;
 	virtual bool Serialize( CUtlBuffer &buf ) = 0;
 #else
-	virtual bool Unserialize( CUtlBuffer &buf, bool bBufferHeaderOnly, bool bStaticDataOnly ) = 0;
+	virtual bool Unserialize( CUtlBuffer &buf, bool bBufferHeaderOnly=false, bool bStaticDataOnly=false ) = 0;
 #endif
 
 	// These are methods to help with optimization:

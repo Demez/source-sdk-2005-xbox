@@ -2598,9 +2598,9 @@ int VRAD_Main(int argc, char **argv)
 	Q_FileBase( source, source, sizeof( source ) );
 
 	LoadCmdLineFromFile( argc, argv, source, "vrad" );
-	if ( g_bUseMPI && !g_bMPIMaster )
-		SetupToolsMinidumpHandler( VMPI_ExceptionFilter );
-	else
+	//if ( g_bUseMPI && !g_bMPIMaster )
+	//	SetupToolsMinidumpHandler( VMPI_ExceptionFilter );
+	//else
 		SetupDefaultToolsMinidumpHandler();
 	
 	return RunVRAD( argc, argv );

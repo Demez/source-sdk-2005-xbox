@@ -233,7 +233,7 @@ public:
 	virtual const char *	GetName() const = 0;
 	virtual const char *	GetTextureGroupName() const = 0;
 
-#ifndef _XBOX
+//#ifndef _XBOX
 	// Get the preferred size/bitDepth of a preview image of a material.
 	// This is the sort of image that you would use for a thumbnail view
 	// of a material, or in WorldCraft until it uses materials to render.
@@ -247,7 +247,7 @@ public:
 	virtual PreviewImageRetVal_t GetPreviewImage( unsigned char *data, 
 												 int width, int height,
 												 ImageFormat imageFormat ) const = 0;
-#endif											    
+//#endif											    
 	// 
 	virtual int				GetMappingWidth( ) = 0;
 	virtual int				GetMappingHeight( ) = 0;

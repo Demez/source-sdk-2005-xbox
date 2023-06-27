@@ -1,4 +1,4 @@
-//========= Copyright © 1996-2005, Valve Corporation, All rights reserved. ============//
+//========= Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. ============//
 //
 // Purpose: Defines and structures for the BSP file format.
 //
@@ -751,7 +751,7 @@ struct dleaf_t
 
 	// NOTE: removed this for version 1 and moved into separate lump "LUMP_LEAF_AMBIENT_LIGHTING" or "LUMP_LEAF_AMBIENT_LIGHTING_HDR"
 	// Precaculated light info for entities.
-//	CompressedLightCube m_AmbientLighting;
+	 CompressedLightCube m_AmbientLighting;
 };
 
 struct dbrushside_t

@@ -1,7 +1,0 @@
-﻿  StdAfx.cpp
-  vvis_launcher.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1374,5): warning MSB8012: TargetPath(K:\HL1RE\source-sdk-2005-xbox\utils\vvis_launcher\Release\vvis_launcher.exe) does not match the Linker's OutputFile property value (K:\HL1RE\source-sdk-2005-xbox\utils\vvis_launcher\Release\vvis.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1376,5): warning MSB8012: TargetName(vvis_launcher) does not match the Linker's OutputFile property value (vvis). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-     Creating library .\Release\vvis_launcher.lib and object .\Release\vvis_launcher.exp
-  vvis_launcher-2005.vcxproj -> K:\HL1RE\source-sdk-2005-xbox\utils\vvis_launcher\Release\vvis_launcher.exe
-  Performing Custom Build Step

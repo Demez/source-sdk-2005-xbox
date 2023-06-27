@@ -1,4 +1,4 @@
-//========= Copyright © 1996-2005, Valve Corporation, All rights reserved. ============//
+//========= Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. ============//
 //
 // Purpose: 
 //
@@ -904,30 +904,7 @@ int LoadLeafs( void )
 	{
 	case 0:
 		{
-			int length = header->lumps[LUMP_LEAFS].filelen;
-			g_Lumps.lumpParsed[LUMP_LEAFS] = 1; // mark it parsed
-			int size = sizeof( dleaf_version_0_t );
-			if( length % size )
-			{
-				Error( "odd size for LUMP_LEAFS\n" );
-			}
-			int count = length / size;
-			dleaf_version_0_t *pSrc = ( dleaf_version_0_t * )( ( byte * )header + header->lumps[LUMP_LEAFS].fileofs );
-			dleaf_t *pDst = dleafs;
-			Assert( g_pLeafAmbientLighting );
-			g_pLeafAmbientLighting->SetCount( count );
-			CompressedLightCube *pDstLeafAmbientLighting = &(*g_pLeafAmbientLighting)[0];
-			int i;
-			for( i = 0; i < count; i++ )
-			{
-				// pDst is a subset of pSrc;
-				*pDst = *( ( dleaf_t * )( void * )pSrc );
-				*pDstLeafAmbientLighting = pSrc->m_AmbientLighting;
-				pDst++;
-				pSrc++;
-				pDstLeafAmbientLighting++;
-			}
-			return count;
+		return CopyLump(LUMP_LEAFS, dleafs, sizeof(dleaf_version_0_t));
 		}		
 		break;
 	case 1:
@@ -1304,14 +1281,14 @@ void	WriteBSPFile (char *filename, char* xzpLumpFilename )
 	memset (header, 0, sizeof(dheader_t));
 
 	header->ident = LittleLong (IDBSPHEADER);
-	header->version = LittleLong (BSPVERSION);
+	header->version = LittleLong (19);
 	header->mapRevision = LittleLong( g_MapRevision );
 
 	wadfile = SafeOpenWrite (filename);
 	SafeWrite (wadfile, header, sizeof(dheader_t));	// overwritten later
 
 	AddLump (LUMP_PLANES, dplanes, numplanes*sizeof(dplane_t));
-	AddLump (LUMP_LEAFS, dleafs, numleafs*sizeof(dleaf_t), LUMP_LEAFS_VERSION);
+	AddLump (LUMP_LEAFS, dleafs, numleafs*sizeof(dleaf_version_0_t), 0);
 	// Make ambient lighting of zero so that the rest of the code can assume that this lump is here.
 	if ( !g_bHDR && g_LeafAmbientLightingLDR.Count() == 0 )
 	{
