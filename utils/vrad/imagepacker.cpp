@@ -62,8 +62,9 @@ bool CImagePacker::AddBlock( int width, int height, int *returnX, int *returnY )
 {
 	// If we've already determined that a block this big couldn't fit
 	// then blow off checking again...
-	if ( ( width >= m_MaxBlockWidth ) && ( height >= m_MaxBlockHeight ) )
+	if ( ( width >= m_MaxBlockWidth ) && ( height >= m_MaxBlockHeight ) ){
 		return false;
+		}
 
 	int bestX = -1;	
 	int maxYIdx;
@@ -101,7 +102,6 @@ bool CImagePacker::AddBlock( int width, int height, int *returnX, int *returnY )
 			m_MaxBlockWidth = width;
 			m_MaxBlockHeight = height;
 		}
-
 		return false;
 	}
 	
@@ -111,15 +111,14 @@ bool CImagePacker::AddBlock( int width, int height, int *returnX, int *returnY )
 	
 	// Check if it actually fit height-wise.
 	// hack
-	//  if( *returnY + height > maxLightmapHeight )
-	if( *returnY + height >= m_MaxLightmapHeight - 1 )
+	  if( *returnY + height > m_MaxLightmapHeight)
+	//if( *returnY + height >= m_MaxLightmapHeight - 1 )
 	{
 		if ( ( width <= m_MaxBlockWidth ) && ( height <= m_MaxBlockHeight )	)
 		{
 			m_MaxBlockWidth = width;
 			m_MaxBlockHeight = height;
 		}
-
 		return false;
 	}
 						   

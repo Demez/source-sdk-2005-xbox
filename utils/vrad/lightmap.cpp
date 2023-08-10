@@ -1,4 +1,4 @@
-//========= Copyright © 1996-2005, Valve Corporation, All rights reserved. ============//
+//========= Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. ============//
 //
 // Purpose: 
 //
@@ -3941,7 +3941,7 @@ static void RegisterLightmappedSurface( dface_t *pFace )
 	// register this surface's lightmap
 	lightmapPage = AllocateLightmap( allocationWidth, allocationHeight,	offsetIntoLightmapPage,	pMaterialName );
 
-//	Warning( "%s: page %d (%dx%d)\n", pMaterialName, lightmapPage, allocationWidth, allocationHeight );
+	//Warning( "%s: page %d (%dx%d)\n", pMaterialName, lightmapPage, allocationWidth, allocationHeight );
 
 	if ( lightmapPage >= 0 )
 	{
